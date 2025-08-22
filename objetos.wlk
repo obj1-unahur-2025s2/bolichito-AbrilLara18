@@ -72,8 +72,9 @@ object muñeco {
   
   method indicarPeso(nuevoPeso) {
     peso = nuevoPeso
-    return peso
   }
+  
+  method peso() = peso
 }
 
 object placa {
@@ -83,18 +84,16 @@ object placa {
   method indicarColor(nuevoColor) {
     color = nuevoColor
   }
-method color() {
-    return color
-  }
   
-  method material() = lino
+  method color() = color
+  
+  method material() = cobre
   
   method indicarPeso(nuevoPeso) {
     peso = nuevoPeso
   }
-  method peso() {
-    return peso
-  }
+  
+  method peso() = peso
 }
 
 object arito {
@@ -108,26 +107,28 @@ object arito {
 object banquito {
   var color = naranja
   
-  method color() {
-    return color
-  } 
+  method indicarColor(nuevoColor) {
+    color = nuevoColor
+  }
+  
+  method color() = color
+  
   method material() = madera
   
   method peso() = 1700
 }
 
 object cajita {
-  var pesoCaja = 400
+  var pesoCaja = 400 + objetoDentro.peso()
+  var objetoDentro = muñeco
   
   method color() = rojo
   
   method material() = cobre
   
-  method peso(pesoObjeto) {
-    pesoCaja += pesoObjeto
+  method indicarObjeto(nuevoObjeto) {
+    objetoDentro = nuevoObjeto
   }
-    method peso() {
-    return pesoCaja
-  }
+  
+  method peso() = pesoCaja
 }
-
