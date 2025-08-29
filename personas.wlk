@@ -7,23 +7,19 @@ object rosa {
 }
 
 object estefania {
-    
   method leGusta(cosa) {
-    const colorCosa=cosa.color()
-    return colorCosa.esFuerte()
+    return cosa.color().esFuerte()
   } 
 }
 
 object luisa {
   method leGusta(cosa){
-  const materialCosa= cosa.material()
-    return materialCosa.esBrillante()
+    return cosa.material().esBrillante()
   } 
 }
 
 object juan {
     method leGusta(cosa) {
-    const colorCosa=cosa.color()
-    return !colorCosa.esFuerte() || (cosa.peso()>=1200 && cosa.peso()<=1800)
+    return !cosa.color().esFuerte() || (cosa.peso().between(1200,1800))
   } 
 }

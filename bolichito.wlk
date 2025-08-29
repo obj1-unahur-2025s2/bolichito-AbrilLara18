@@ -11,10 +11,7 @@ object bolichito {
     vidriera= cosaVid
   }
   method sonBrillantes() {
-    const materialMostrador= mostrador.material()
-    const materialVidriera=vidriera.material()
-    return materialMostrador.esBrillante()  && materialVidriera.esBrillante()
-    
+    return mostrador.material().esBrillante()  && vidriera.material().esBrillante()
   }
   method esMonocromatico() {
     return mostrador.color() ==  vidriera.color() 
@@ -28,9 +25,7 @@ object bolichito {
     
   }
   method tieneDeColor(color){
-    const colorMostrador= mostrador.color()
-    const colorVidriera=vidriera.color()
-    return colorMostrador == color || colorVidriera == color
+    return  mostrador.color() == color || vidriera.color() == color
   }
 
 method leGustaLoExhibido(alguien) {
